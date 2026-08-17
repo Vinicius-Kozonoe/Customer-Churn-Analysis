@@ -31,3 +31,6 @@ print(churn_contrato)
 
 churn_idade = df.groupby('Faixa_Etaria')['Churn'].apply(lambda x: (x == 'Sim').mean())
 print(churn_idade.sort_values(ascending=False))
+
+churn_regiao = df.groupby('Regiao')['Churn'].apply(lambda x: (x == 'Sim').mean())
+print(churn_regiao.sort_values(ascending=False))
