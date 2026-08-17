@@ -25,3 +25,6 @@ print(churn_plano.sort_values(ascending=False))
 
 churn_reclamacoes = df.groupby('Reclamacoes')['Churn'].apply(lambda x: (x == 'Sim').mean())
 print(churn_reclamacoes)
+
+churn_contrato = df.groupby('Faixa_Contrato')['Churn'].apply(lambda x: (x == 'Sim').mean())
+print(churn_contrato)
