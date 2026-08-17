@@ -22,3 +22,6 @@ df['Faixa_Contrato'] = pd.cut(df['Tempo_Contrato_Meses'], bins=[0, 12, 24, 36, 4
 
 churn_plano = df.groupby('Plano')['Churn'].apply(lambda x: (x == 'Sim').mean())
 print(churn_plano.sort_values(ascending=False))
+
+churn_reclamacoes = df.groupby('Reclamacoes')['Churn'].apply(lambda x: (x == 'Sim').mean())
+print(churn_reclamacoes)
