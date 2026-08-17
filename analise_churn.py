@@ -34,3 +34,6 @@ print(churn_idade.sort_values(ascending=False))
 
 churn_regiao = df.groupby('Regiao')['Churn'].apply(lambda x: (x == 'Sim').mean())
 print(churn_regiao.sort_values(ascending=False))
+
+perfil_churn = df.groupby('Churn')[['Idade', 'Tempo_Contrato_Meses', 'Mensalidade', 'Reclamacoes', 'Chamados_Suporte']].mean()
+print(perfil_churn)
