@@ -28,3 +28,6 @@ print(churn_reclamacoes)
 
 churn_contrato = df.groupby('Faixa_Contrato')['Churn'].apply(lambda x: (x == 'Sim').mean())
 print(churn_contrato)
+
+churn_idade = df.groupby('Faixa_Etaria')['Churn'].apply(lambda x: (x == 'Sim').mean())
+print(churn_idade.sort_values(ascending=False))
