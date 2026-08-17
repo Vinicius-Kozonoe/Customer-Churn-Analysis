@@ -81,3 +81,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig('churn_por_contrato.png')
 plt.show()
+
+# Exporta o resultado
+
+df.to_csv('clientes_churn_tratado.csv', index=False)
